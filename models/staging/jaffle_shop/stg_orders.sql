@@ -3,4 +3,4 @@ select
     user_id as customer_id,
     order_date,
     status
-from dbt_practice.raw_orders    
+from {{ source('dbt_practice', 'raw_orders') }} 
